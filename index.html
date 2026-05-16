@@ -1225,7 +1225,7 @@ createApp({
 
     function fmt(n){ return fmtNum(n); }
 
-    let toastId=0;
+    var toastId=0;
     function toast(msg, type=''){
       const id=++toastId;
       toasts.value.push({id,msg,type});
