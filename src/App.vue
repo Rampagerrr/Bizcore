@@ -512,7 +512,7 @@ export default {
           <div>
             <div class="product-grid">
               <div v-for="p in filteredProducts" :key="p.id"
-                   class="product-card" :class="{in-cart: cartQty(p.id)>0}"
+                   class="product-card" :class="{'in-cart': cartQty(p.id)>0}"
                    @click="p.available && addToCart(p)">
                 <div class="product-img">{{ p.emoji }}</div>
                 <div class="product-body">
