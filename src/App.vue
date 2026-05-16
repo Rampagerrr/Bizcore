@@ -391,7 +391,6 @@ export default {
         name: newProduct.value.name,
         category_id: newProduct.value.category_id,
         base_price: newProduct.value.price,
-        emoji: newProduct.value.emoji,
         is_available: true
       });
       addProductModal.value=false;
@@ -514,7 +513,7 @@ export default {
               <div v-for="p in filteredProducts" :key="p.id"
                    class="product-card" :class="{'in-cart': cartQty(p.id)>0}"
                    @click="p.available && addToCart(p)">
-                <div class="product-img">{{ p.emoji }}</div>
+                <div class="product-img">{{ p.emoji || '🍽️' }}</div>
                 <div class="product-body">
                   <div class="product-name">{{ p.name }}</div>
                   <div class="product-cat">{{ p.category }}</div>
