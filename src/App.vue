@@ -1023,8 +1023,8 @@ export default {
       </div>
       <div class="form-group">
         <label class="form-label">Category</label>
-        <select class="form-select" v-model="newProduct.category">
-          <option v-for="c in categories" :key="c" :value="c">{{ c }}</option>
+        <select class="form-select" v-model="newProduct.category_id">
+          <option v-for="c in productCategories" :key="c.id" :value="c.id">{{ c.name }}</option>
         </select>
       </div>
       <div class="form-group">
